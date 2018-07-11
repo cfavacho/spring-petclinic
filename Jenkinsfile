@@ -13,7 +13,7 @@ pipeline {
       steps {
         sh 'cp /root/mv_config/settings.xml /usr/share/maven/conf/settings.xml'
         sh 'ls -l /root/repo/.m2'
-        sh 'mvn -X clean install'        
+        sh 'mvn -X compile'        
       }
     } 
   }
