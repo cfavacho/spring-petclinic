@@ -11,6 +11,8 @@ pipeline {
         }
       }
       steps {
+        sh 'ls -l'
+        sh 'mvn  dependency:copy-dependencies'
         sh 'cp /root/mv_config/settings.xml /usr/share/maven/conf/settings.xml'
         sh 'mvn -X clean install'        
       }
