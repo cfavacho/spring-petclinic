@@ -7,7 +7,7 @@ pipeline {
       agent {
         docker {
           image 'maven:3.5.0'   
-          args '-v maven_repo:/root/'
+          args '-v maven_config:/root/mv_config'
         }
       }
       steps {
