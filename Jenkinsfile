@@ -12,6 +12,7 @@ pipeline {
       }
       steps {
         sh 'mvn clean install'
+        sh 'cp /root/mv_config/settings.xml /usr/share/maven/conf/settings.xml'
       }
     } 
   }
