@@ -29,6 +29,7 @@ pipeline {
       steps {
         withCredentials([usernamePassword(credentialsId: 'dockerHubPriv', passwordVariable: 'dockerHubPrivPassword', usernameVariable: 'dockerHubPrivUser')]) {
           sh "docker login -u ${env.dockerHubPrivUser} -p ${env.dockerHubPrivPassword}"
+          sh 'docker tag spring-petclinic favacho/spring-petclinic:latest'
           sh 'docker push favacho/spring-petclinic:latest'
         }
       }
