@@ -14,6 +14,12 @@ pipeline {
         sh 'cp /root/mv_config/settings.xml /usr/share/maven/conf/settings.xml'
         sh 'mvn clean install'
       }
-    } 
+    }
+    stage('Docker Build') {
+      agent any
+      steps {
+        sh 'docker build -t cfavacho/spring-petclinic:latest .'
+      }
+    }	
   }
 }
