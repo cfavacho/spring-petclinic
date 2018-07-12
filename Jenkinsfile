@@ -12,8 +12,8 @@ pipeline {
       }
       steps {
         sh 'cp /root/mv_config/settings.xml /usr/share/maven/conf/settings.xml'
-        sh 'mvn -o compile'  
-        sh 'mvn -o package'  
+        sh 'mvn -Xo compile'  
+        sh 'mvn -Xo package'  
       }
     } 
   }
