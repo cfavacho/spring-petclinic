@@ -12,8 +12,7 @@ pipeline {
       }
       steps {
         sh 'cp /root/mv_config/settings.xml /usr/share/maven/conf/settings.xml'
-        sh 'mvn -X compile'  
-        sh 'mvn -X package'  
+        sh 'mvn clean install'
       }
     } 
   }
