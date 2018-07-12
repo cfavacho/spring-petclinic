@@ -1,7 +1,7 @@
 #!groovy
 
 pipeline {
-  agent none
+  agent { label 'docker-agent' }
   stages {
     stage('Maven Install') {
       agent {
