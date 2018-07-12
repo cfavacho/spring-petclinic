@@ -16,9 +16,10 @@ pipeline {
       }
     }
     stage('Docker Build') {
-      agent docker-agent
+      agent any
       steps {
-        sh 'ls -l'
+        sh 'pwd'
+        sh 'hostname'
         sh 'docker build -t cfavacho/spring-petclinic:latest .'
       }
     }	
