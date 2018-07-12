@@ -24,7 +24,7 @@ pipeline {
         sh 'docker build -t spring-petclinic:latest .'
       }
     }
-    	stage('Docker Push') {
+    	/*stage('Docker Push') {
       agent { label 'docker-agent' }
       steps {
         withCredentials([usernamePassword(credentialsId: 'dockerHubPriv', passwordVariable: 'dockerHubPrivPassword', usernameVariable: 'dockerHubPrivUser')]) {
@@ -33,7 +33,7 @@ pipeline {
           sh 'docker push favacho/spring-petclinic:latest'
         }
       }
-    }
+    }*/
     
   }
 }
