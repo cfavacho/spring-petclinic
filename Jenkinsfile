@@ -19,6 +19,7 @@ pipeline {
     stage('Docker Build') {
       agent { label 'docker-agent' }
       steps {
+        sh 'ls -l /apps'
         sh 'docker build -t cfavacho/spring-petclinic:latest .'
       }
     }	
